@@ -1,5 +1,5 @@
-defmodule ElixersWeb.LayoutViewTest do
-  use ElixersWeb.ConnCase, async: true
+defmodule ElixerWeb.LayoutViewTest do
+  use ElixerWeb.ConnCase, async: true
 
   # When testing helpers, you may want to import Phoenix.HTML and
   # use functions such as safe_to_string() to convert the helper

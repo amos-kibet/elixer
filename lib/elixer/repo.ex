@@ -1,5 +1,5 @@
-defmodule Elixers.Repo do
+defmodule Elixer.Repo do
   use Ecto.Repo,
-    otp_app: :elixers,
+    otp_app: :elixer,
     adapter: Ecto.Adapters.Postgres
 end

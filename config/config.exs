@@ -7,14 +7,14 @@
 # General application configuration
 import Config
 
-config :elixers,
-  ecto_repos: [Elixers.Repo]
+config :elixer,
+  ecto_repos: [Elixer.Repo]
 
 # Configures the endpoint
-config :elixers, ElixersWeb.Endpoint,
+config :elixer, ElixerWeb.Endpoint,
   url: [host: "localhost"],
-  render_errors: [view: ElixersWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Elixers.PubSub,
+  render_errors: [view: ElixerWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: Elixer.PubSub,
   live_view: [signing_salt: "poagR4LH"]
 
 # Configures the mailer
@@ -24,7 +24,7 @@ config :elixers, ElixersWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :elixers, Elixers.Mailer, adapter: Swoosh.Adapters.Local
+config :elixer, Elixer.Mailer, adapter: Swoosh.Adapters.Local
 
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false

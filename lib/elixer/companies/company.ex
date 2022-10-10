@@ -1,4 +1,4 @@
-defmodule Elixers.Companies.Company do
+defmodule Elixer.Companies.Company do
   use Ecto.Schema
   import Ecto.Changeset
 

@@ -1,5 +1,5 @@
-defmodule ElixersWeb.PageControllerTest do
-  use ElixersWeb.ConnCase
+defmodule ElixerWeb.PageControllerTest do
+  use ElixerWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")

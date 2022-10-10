@@ -1,7 +1,7 @@
-defmodule Elixers.Companies do
+defmodule Elixer.Companies do
   import Ecto.Query, warn: false
-  alias Elixers.Repo
-  alias Elixers.Companies.Company
+  alias Elixer.Repo
+  alias Elixer.Companies.Company
 
   @doc """
   List all companies using Elixir

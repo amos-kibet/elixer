@@ -1,5 +1,5 @@
-defmodule ElixersWeb.ErrorView do
-  use ElixersWeb, :view
+defmodule ElixerWeb.ErrorView do
+  use ElixerWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

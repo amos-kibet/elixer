@@ -1,11 +1,11 @@
 import Config
 
 # Configure your database
-config :elixers, Elixers.Repo,
+config :elixer, Elixer.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "172.17.0.2",
-  database: "elixers_dev",
+  database: "elixer_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -16,7 +16,7 @@ config :elixers, Elixers.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with esbuild to bundle .js and .css sources.
-config :elixers, ElixersWeb.Endpoint,
+config :elixer, ElixerWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: 4000],
@@ -54,7 +54,7 @@ config :elixers, ElixersWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :elixers, ElixersWeb.Endpoint,
+config :elixer, ElixerWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",

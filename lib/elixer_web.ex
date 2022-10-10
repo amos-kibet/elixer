@@ -1,12 +1,12 @@
-defmodule ElixersWeb do
+defmodule ElixerWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use ElixersWeb, :controller
-      use ElixersWeb, :view
+      use ElixerWeb, :controller
+      use ElixerWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,11 +19,11 @@ defmodule ElixersWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: ElixersWeb
+      use Phoenix.Controller, namespace: ElixerWeb
 
       import Plug.Conn
-      import ElixersWeb.Gettext
-      alias ElixersWeb.Router.Helpers, as: Routes
+      import ElixerWeb.Gettext
+      alias ElixerWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -31,7 +31,7 @@ defmodule ElixersWeb do
     quote do
       use Phoenix.View,
         root: "lib/elixers_web/templates",
-        namespace: ElixersWeb
+        namespace: ElixerWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -45,7 +45,7 @@ defmodule ElixersWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {ElixersWeb.LayoutView, "live.html"}
+        layout: {ElixerWeb.LayoutView, "live.html"}
 
       unquote(view_helpers())
     end
@@ -80,7 +80,7 @@ defmodule ElixersWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import ElixersWeb.Gettext
+      import ElixerWeb.Gettext
     end
   end
 
@@ -95,9 +95,9 @@ defmodule ElixersWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import ElixersWeb.ErrorHelpers
-      import ElixersWeb.Gettext
-      alias ElixersWeb.Router.Helpers, as: Routes
+      import ElixerWeb.ErrorHelpers
+      import ElixerWeb.Gettext
+      alias ElixerWeb.Router.Helpers, as: Routes
     end
   end
 

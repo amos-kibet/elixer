@@ -1,5 +1,5 @@
-defmodule ElixersWeb.LayoutView do
-  use ElixersWeb, :view
+defmodule ElixerWeb.LayoutView do
+  use ElixerWeb, :view
 
   # Phoenix LiveDashboard is available only in development by default,
   # so we instruct Elixir to not warn if the dashboard route is missing.

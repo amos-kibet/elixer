@@ -1,11 +1,11 @@
-defmodule ElixersWeb.Router do
-  use ElixersWeb, :router
+defmodule ElixerWeb.Router do
+  use ElixerWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, {ElixersWeb.LayoutView, :root}
+    plug :put_root_layout, {ElixerWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -14,14 +14,14 @@ defmodule ElixersWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", ElixersWeb do
+  scope "/", ElixerWeb do
     pipe_through :browser
 
     get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", ElixersWeb do
+  # scope "/api", ElixerWeb do
   #   pipe_through :api
   # end
 
@@ -38,7 +38,7 @@ defmodule ElixersWeb.Router do
     scope "/" do
       pipe_through :browser
 
-      live_dashboard "/dashboard", metrics: ElixersWeb.Telemetry
+      live_dashboard "/dashboard", metrics: ElixerWeb.Telemetry
     end
   end
 

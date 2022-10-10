@@ -1,4 +1,4 @@
-defmodule Elixers.Repo.Migrations.CreateCompany do
+defmodule Elixer.Repo.Migrations.CreateCompany do
   use Ecto.Migration
 
   def change do

@@ -1,4 +1,4 @@
-defmodule ElixersWeb.Endpoint do
+defmodule ElixerWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :elixers
 
   # The session will be stored in the cookie and signed,
@@ -46,5 +46,5 @@ defmodule ElixersWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug ElixersWeb.Router
+  plug ElixerWeb.Router
 end

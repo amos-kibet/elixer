@@ -1,9 +1,9 @@
-defmodule Elixers.MixProject do
+defmodule Elixer.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :elixers,
+      app: :elixer,
       version: "0.1.0",
       elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,7 +19,7 @@ defmodule Elixers.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Elixers.Application, []},
+      mod: {Elixer.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
