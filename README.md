@@ -1,3 +1,3 @@
 # Elixers
 
-This is an application that lists companies uisng Elixir
+This is an application that lists companies using Elixir
