@@ -15,7 +15,7 @@ config :elixer, ElixerWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [view: ElixerWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Elixer.PubSub,
-  live_view: [signing_salt: "poagR4LH"]
+  live_view: [signing_salt: "lBQelCGk"]
 
 # Configures the mailer
 #

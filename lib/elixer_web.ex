@@ -30,7 +30,7 @@ defmodule ElixerWeb do
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/elixers_web/templates",
+        root: "lib/elixer_web/templates",
         namespace: ElixerWeb
 
       # Import convenience functions from controllers

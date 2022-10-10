@@ -17,7 +17,7 @@ config :elixer, Elixer.Repo,
 # you can enable the server option below.
 config :elixer, ElixerWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "wqPfmBciKsRYu/Zj2CIAQgT0pLr7E4e2wPwFEpgY5qOw3/1uHkzhtLCPMrkLvU7d",
+  secret_key_base: "/ZKofL1JTo2k/k27tjwNHjGsKAOPOunsna6iTGM0sadovdNi1BVpZGEVBM9zTuNl",
   server: false
 
 # In test we don't send emails.

@@ -4,7 +4,7 @@ import Config
 config :elixer, Elixer.Repo,
   username: "postgres",
   password: "postgres",
-  hostname: "172.17.0.2",
+  hostname: "localhost",
   database: "elixer_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
@@ -23,7 +23,7 @@ config :elixer, ElixerWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "4/udhzvoKcTPctbVQLZEZXE0Gf+SIrQrNcvcuotIqJONWKhSe22OF1ZYMvXuiTCF",
+  secret_key_base: "FrMemv3hFksNLZLFjkQ5pmDLbdBXeGI3/2y7Rbh8rKdVOlCo7zY3J7zclzzutWWI",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
@@ -59,8 +59,8 @@ config :elixer, ElixerWeb.Endpoint,
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/elixers_web/(live|views)/.*(ex)$",
-      ~r"lib/elixers_web/templates/.*(eex)$"
+      ~r"lib/elixer_web/(live|views)/.*(ex)$",
+      ~r"lib/elixer_web/templates/.*(eex)$"
     ]
   ]
 
