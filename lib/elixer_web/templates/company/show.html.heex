@@ -1,0 +1,30 @@
+<section>
+    <h2>Showing one company</h2>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Url</td>
+                <td>Short Description</td>
+                <td>Industry</td>
+                <td>Tech Stack</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            <%= for company <- @companies do %>
+            <tr>
+                <td><%= company.name %></td>
+                <td><%= link {company.url}, to: company.url, rel: "noopener noreferer", target: "_blank" %></td>
+                <td><%= company.short_description %></td>
+                <td><%=company.industry %></td>
+                <td><%=company.tech_stack %></td>
+                <td>
+                    <%= link "Edit", to: Routes.company_path(@conn, :update) %> |
+                    <%= link "Delete", to: Routes.company_path(@conn, :delete) %>
+                </td>
+            </tr>
+            <%= end %>
+        </tbody>
+    </table>
+</section>
