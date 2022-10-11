@@ -17,7 +17,7 @@ defmodule ElixerWeb.Router do
   scope "/", ElixerWeb do
     pipe_through :browser
 
-    resources "/", CompanyController, only: [:index, :show, :create, :new]
+    resources "/", CompanyController, only: [:index, :show, :create, :new, :update, :delete]
     get "/phoenix", PageController, :index
   end
 

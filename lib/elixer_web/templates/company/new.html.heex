@@ -1,25 +1,5 @@
 <h1>New Company Info</h1>
 
-<%= form_for @changeset, 
-    Routes.company_path(@conn, :create), fn i -> 
- %>
-    <div class="alert alert-danger">
-        <p>Oops, something went wrong! Please check the error below.</p>
-    </div>
-    <div>
-        <%= text_input i, :name, placeholder: "Company Name" %>
-    </div>
-    <div>
-        <%= text_input i, :url, placeholder: "Company Website" %>
-    </div>
-    <div>
-        <%= text_input i, :brief_description, placeholder: "Brief Company Description" %>
-    </div>
-    <div>
-        <%= text_input i, :industry, placeholder: "Company Industry" %>
-    </div>
-    <div>
-        <%= text_input i, :tech_stack, placeholder: "Company Tech Stack" %>
-    </div>
-    <%= submit "Submit Company" %>
-<% end %>
+<%= render "form.html", Map.put(assigns, :action, Routes.company_path(@conn, :create)) %>
+
+<span><%= link "Back", to: Routes.company_path(@conn, :index) %></span>
