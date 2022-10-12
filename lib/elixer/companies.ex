@@ -7,6 +7,9 @@ defmodule Elixer.Companies do
 
   @doc """
   Fetches all companies from the db
+  TODO:
+    running Repo.all(Company) in iex returns errors,
+    running Companies.get_all, returns db data as expected
   """
   def get_all, do: Repo.all(Company)
 
@@ -26,6 +29,7 @@ defmodule Elixer.Companies do
 
   @doc """
   Updates a company info
+  TODO: Fix this API, not working on iex
   """
   def update(%Company{} = company, attrs) do
     company
@@ -35,6 +39,7 @@ defmodule Elixer.Companies do
 
   @doc """
   Deletes a company
+  TODO: Fix this API, not working on iex
   """
   def delete(%Company{} = company) do
     Repo.delete(company)
@@ -43,7 +48,7 @@ defmodule Elixer.Companies do
   @doc """
   Track changes in changesets
   """
-  def change_company(%Company{} = company, params) do
-    Company.changeset(company, params)
+  def change_company(%Company{} = company, attrts \\ %{}) do
+    Company.changeset(company, attrts)
   end
 end

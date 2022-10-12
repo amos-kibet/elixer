@@ -24,7 +24,7 @@
             <td><%=company.industry %></td>
             <td><%=company.tech_stack %></td>
             <td>
-                <%= link "Edit", to: Routes.company_path(@conn, :update, company) %> |
+                <%= link "Edit", to: Routes.company_path(@conn, :edit, company) %> |
                 <%= link "Delete", to: Routes.company_path(@conn, :delete, company), method: :delete, data: [confirm: "Are you sure?"] %>
             </td>
         </tr>

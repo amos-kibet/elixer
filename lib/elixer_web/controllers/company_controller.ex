@@ -21,7 +21,7 @@ defmodule ElixerWeb.CompanyController do
   end
 
   @doc """
-  Renders input form to create a new company
+  Creates a new company
   """
   def create(conn, %{"company" => params}) do
     {:ok, _company} = Companies.create(params)
@@ -39,17 +39,23 @@ defmodule ElixerWeb.CompanyController do
     render(conn, "new.html", changeset: changeset)
   end
 
+  def edit(conn, %{"id" => id}) do
+    company = Companies.get_by!(id)
+    changeset = Companies.change_company(company)
+    render(conn, "edit.html", company: company, changeset: changeset)
+  end
+
   @doc """
   Updates the company info
   """
-  def update(conn, %{"id" => id, "company" => params}) do
+  def update(conn, %{"id" => id, "params" => params}) do
     company = Companies.get_by!(id)
 
     case Companies.update(company, params) do
-      {:ok, company} ->
+      {:ok, _company} ->
         conn
         |> put_flash(:info, "Company profile updated!")
-        |> redirect(to: Routes.company_path(conn, :show, company))
+        |> redirect(to: Routes.company_path(conn, :index))
 
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "edit.html", company: company, changeset: changeset)
